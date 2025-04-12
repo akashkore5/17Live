@@ -6,13 +6,24 @@ This project addresses the task of removing duplicate streams from the top 3 pos
 ## Steps to Run the Code
 
 1. **Prerequisites**:
-    - Ensure you have Java Development Kit (JDK) 8 or higher installed.
-    - Install a build tool (e.g., Maven) or use the command-line compiler.
-    - Configure a logging framework (e.g., SLF4J with Logback) for log output.
-    - Navigate to the root folder and run:
-   ```bash
-     mvn clean install
+   - Ensure you have Java Development Kit (JDK) 8 or higher installed. You can verify the installation by running:
+     ```bash
+     java -version
      ```
+   - Install a build tool such as Maven. To verify Maven installation, run:
+     ```bash
+     mvn -version
+     ```
+   - Configure a logging framework (e.g., SLF4J with Logback) for log output. Ensure the `logback.xml` file is correctly placed in the `resources` directory.
+   - Clone the repository and navigate to the project directory:
+     ```bash
+     git clone https://github.com/akashkore5/17Live.git
+     cd 17Live
+     ```
+   - Build the project using Maven:
+     ```bash
+     mvn clean install
+     ````
 
 2. **Project Structure**:
     - The project contains a `src` directory with all Java source files (`org.live17.*` packages).
