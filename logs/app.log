@@ -1,0 +1,368 @@
+2025-04-12 13:44:55 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 13:44:55 ERROR org.live17.io.JsonFileReader - Failed to read input file: input.json
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	at org.live17.Main.main(Main.java:20)
+2025-04-12 13:44:55 ERROR org.live17.Main - Deduplication failed: Error reading input file: input.json
+org.live17.exception.DeduplicationException: Error reading input file: input.json
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:34)
+	at org.live17.Main.main(Main.java:20)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	... 1 common frames omitted
+2025-04-12 13:48:40 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 13:48:40 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 13:48:40 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 13:48:40 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 13:48:40 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 13:48:40 WARN  o.l.s.StreamDeduplicationServiceImpl - Could not find non-duplicate for position 1 in section s2
+2025-04-12 13:48:40 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 13:58:20 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 13:58:20 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 13:58:20 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 13:58:20 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 13:58:20 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 13:58:20 WARN  o.l.s.StreamDeduplicationServiceImpl - Could not find non-duplicate for position 1 in section s2
+2025-04-12 13:58:20 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 13:58:52 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 13:58:52 ERROR org.live17.io.JsonFileReader - Failed to read input file: input.json
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	at org.live17.Main.main(Main.java:20)
+2025-04-12 13:58:52 ERROR org.live17.Main - Deduplication failed: Error reading input file: input.json
+org.live17.exception.DeduplicationException: Error reading input file: input.json
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:34)
+	at org.live17.Main.main(Main.java:20)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	... 1 common frames omitted
+2025-04-12 13:59:40 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 13:59:40 ERROR org.live17.io.JsonFileReader - Failed to read input file: input.json
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	at org.live17.Main.main(Main.java:20)
+2025-04-12 13:59:40 ERROR org.live17.Main - Deduplication failed: Error reading input file: input.json
+org.live17.exception.DeduplicationException: Error reading input file: input.json
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:34)
+	at org.live17.Main.main(Main.java:20)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	... 1 common frames omitted
+2025-04-12 13:59:46 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 13:59:46 ERROR org.live17.io.JsonFileReader - Failed to read input file: input.json
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	at org.live17.Main.main(Main.java:20)
+2025-04-12 13:59:46 ERROR org.live17.Main - Deduplication failed: Error reading input file: input.json
+org.live17.exception.DeduplicationException: Error reading input file: input.json
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:34)
+	at org.live17.Main.main(Main.java:20)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	... 1 common frames omitted
+2025-04-12 14:41:50 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 14:41:50 ERROR org.live17.io.JsonFileReader - Failed to read input file: input.json
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	at org.live17.Main.main(Main.java:20)
+2025-04-12 14:41:50 ERROR org.live17.Main - Deduplication failed: Error reading input file: input.json
+org.live17.exception.DeduplicationException: Error reading input file: input.json
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:34)
+	at org.live17.Main.main(Main.java:20)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "lokalisedKey" (class org.live17.model.Section), not marked as ignorable (2 known properties: "sectionID", "sectionData"])
+ at [Source: (File); line: 54, column: 4] (through reference chain: java.lang.Object[][0]->org.live17.model.Section["lokalisedKey"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:823)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1153)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1589)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1543)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:438)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1287)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:326)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:159)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:195)
+	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:21)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4014)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2903)
+	at org.live17.io.JsonFileReader.readSections(JsonFileReader.java:30)
+	... 1 common frames omitted
+2025-04-12 14:59:48 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 14:59:48 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 14:59:48 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 14:59:48 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 14:59:48 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 14:59:48 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:02:06 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:02:06 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:02:06 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:02:06 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:02:06 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:02:06 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:02:41 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 15:02:41 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 15:02:41 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 15:02:41 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 15:02:41 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 15:02:41 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 15:02:49 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 15:02:49 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 15:02:49 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 15:02:49 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 15:02:49 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 15:02:49 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 15:03:48 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:03:48 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:03:48 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:03:48 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:03:48 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:03:48 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:04:24 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:04:24 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:04:24 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:04:24 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:04:24 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:04:24 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:05:15 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:05:15 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:05:15 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:05:15 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:05:15 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:05:15 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:07:53 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:07:53 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:07:53 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:07:53 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:07:53 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:07:53 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:10:04 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 15:10:04 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 15:10:04 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 15:10:04 WARN  o.l.s.StreamDeduplicationServiceImpl - Received null or empty sections list
+2025-04-12 15:10:04 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 2 sections
+2025-04-12 15:10:04 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 2 sections
+2025-04-12 15:10:08 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:10:08 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:10:08 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:10:08 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:10:08 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:10:08 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:11:13 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:11:13 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:11:13 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:11:13 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:11:13 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:11:13 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:12:25 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:12:25 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:12:25 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:12:25 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:12:25 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:12:25 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:12:45 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:12:45 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:12:45 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:12:45 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:12:45 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:12:45 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:18:11 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:18:11 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:18:11 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:18:11 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:18:11 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:18:11 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:20:25 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:20:25 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:20:25 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:20:25 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:20:25 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:20:25 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:21:58 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:21:58 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:22:52 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:22:52 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:23:07 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:23:07 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:24:15 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:24:15 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:25:00 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:25:00 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:31:23 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:31:23 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:35:15 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:35:15 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:36:27 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:36:27 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:36:51 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:36:51 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:39:51 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:39:51 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:40:14 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:40:14 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:40:14 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:40:14 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:40:14 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:40:14 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:41:46 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:41:46 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:41:46 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:41:46 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:41:46 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:41:46 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 15:42:00 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 1 sections
+2025-04-12 15:42:00 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 1 sections
+2025-04-12 15:43:21 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 15:43:21 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 15:43:21 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 15:43:21 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 15:43:21 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 15:43:21 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 16:18:43 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 16:18:44 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 16:18:44 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 16:18:44 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 16:18:44 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 16:18:44 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 16:19:37 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 16:19:37 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 16:19:37 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 16:19:37 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 16:19:37 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 16:19:37 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 16:20:32 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 16:20:32 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 16:20:32 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 16:20:32 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 16:20:32 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 16:20:32 INFO  org.live17.Main - Stream deduplication completed successfully
+2025-04-12 16:22:00 INFO  org.live17.io.JsonFileReader - Reading input file: input.json
+2025-04-12 16:22:00 INFO  o.l.s.StreamDeduplicationServiceImpl - Starting deduplication for 3 sections
+2025-04-12 16:22:00 INFO  o.l.s.StreamDeduplicationServiceImpl - Deduplication complete. Output map created with 3 sections
+2025-04-12 16:22:00 INFO  org.live17.io.JsonFileWriter - Writing output to file: output.json
+2025-04-12 16:22:00 INFO  org.live17.io.JsonFileWriter - Successfully wrote output to output.json
+2025-04-12 16:22:00 INFO  org.live17.Main - Stream deduplication completed successfully
